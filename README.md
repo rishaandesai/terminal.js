@@ -1,5 +1,5 @@
 # terminal.js
-Terminal.js is a lightweight, easy to use terminal interface for the web.
+Terminal.js is a lightweight, easy to use terminal interface for the web. (Note: This does not actually _run_ Javascript code)
 Currently, terminal.js has only been tested on HTML, but it _should_ work on other platforms.
 
 # Installation
