@@ -2,10 +2,10 @@
 Terminal.js is a lightweight, easy to use terminal interface for the web.
 Currently, terminal.js has only been tested on HTML, but it _should_ work on other platforms.
 
-#Installation
+# Installation
 `pip install terminaljs`
 
-#Usage
+# Usage
 I'll add this soon...
 
 # Screenshots
