@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample</title>
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="stylesheet" href="CSS/main-extra.css">
+  <script src="https://kit.fontawesome.com/3f2db6afb6.js" crossorigin="anonymous"></script>
+  <script src="JS/terminal.js"></script>
+  <script src="JS/main.js"></script>
+  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</head>
+<body>
+
+  <div class="terminal_window" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    </div>
+    <div class="fakeMenu">
+      <div class="fakeButtons fakeClose"></div>
+      <div class="fakeButtons fakeMinimize"></div>
+      <div class="fakeButtons fakeZoom"></div>
+    </div>
+    <div class="fakeScreen">
+      <div class="terminal-window primary-bg" onclick="document.getElementById('dummyKeyboard').focus();">
+        <div class="terminal-output" id="terminalOutput">
+          <div class="terminal-line">
+            <span class="help-msg">Type <span class="help">help</span> to see a list of supported
+              commands.<br>
+          </div>
+        </div>
+        <div class="terminal-line">
+          <span class="success">➜</span>
+          <span class="directory">~</span>
+          <span class="user-input" id="userInput"></span>
+          <span class="line anim-typewriter"></span>
+          <input type="text" id="dummyKeyboard" class="dummy-keyboard" />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
