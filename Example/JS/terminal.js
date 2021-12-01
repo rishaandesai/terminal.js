@@ -22,8 +22,6 @@ const COMMANDS = {
   sudo: "user not in the sudoers file.  This incident will be reported.",
   help:
     'Supported commands: <span class="code">about</span>, <span class="code">contact</span>, <span class="code">projects</span>, <span class="code">github</span><br>System commands: <span class="code">clear</span>, <span class="code">history</span>, <span class="code">cd</span>, <span class="code">ls</span><br>Tip: Use Up / Down arrow to go through recent commands',
-  info:
-    "<span class='aboutHead'>Name:</span> Aayush<br><span class='aboutHead'>Location:</span> Canada<br><span class='aboutHead'>Favourites:</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Os</span>: Arch, MacOs&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Editor</span>: Vim, Nova<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Version Control</span>: Git<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Tabs or Spaces</span>: Depends usually <i>Tabs</i><br>&nbsp;&nbsp;&nbsp;&nbsp;",
   contact:
     "Email (coming soon): <a class='link' href=''>Gmail</a><br>Form: <a href='/contact' class='link'> Anon Message</a><br>",
 };
@@ -53,7 +51,7 @@ const execute = function executeCommand(input) {
   } else if (input === "history") {
     showHist();
   } else if (input === "github") {
-    open("https://github.com/Aayush9029");
+    open("https://github.com/terminal-js");
   } else {
     output = `<div class="terminal-line"><span class="success">➜</span> <span class="directory">~</span> ${input}</div>`;
     if (!COMMANDS.hasOwnProperty(input)) {
