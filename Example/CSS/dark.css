@@ -19,7 +19,7 @@ body {
   height: 100%;
   overflow: auto;
   padding: 20px;
-  background-color: #e5e5e5;
+  background-color: #1e1e1e;
 }
 
 .terminal_text {
@@ -48,7 +48,7 @@ p {
 .terminal-bar-text {
   position: absolute;
   margin-top: 3px;
-  color: #383838;
+  color: white;
   width: 100%;
   text-align: center;
   /* font-weight: 500; */
@@ -73,7 +73,7 @@ p {
   position: relative;
   font-family: "Anonymous Pro", monospace;
   font-size: 0.9em;
-  color: #5d656b;
+  color: white;
   margin-top: 5px;
 }
 
@@ -144,13 +144,13 @@ p {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid #121212;
   position: relative;
   top: 6px;
   left: 6px;
   background-color: #ff3b47;
   display: inline-block;
-  box-shadow: -1px -1px 15px #ffffff, 10px 10px 30px rgba(174, 174, 192, 0.4);
+  box-shadow: -1px -1px 15px #121212, 10px 10px 30px rgba(174, 174, 192, 0.4);
 }
 
 .fakeMinimize {
@@ -169,7 +169,7 @@ p {
   width: 550px;
   box-sizing: border-box;
   height: 25px;
-  background-color: #f0f0f3;
+  background-color: #121212;
   margin: 0 auto;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -187,6 +187,6 @@ p {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
-  background: #f0f0f3;
-  box-shadow: -10px -10px 30px #ffffff, 10px 10px 30px rgba(174, 174, 192, 0.4);
+  background: #121212;
+  box-shadow: -10px -10px 30px #121212, 10px 10px 30px rgba(174, 174, 192, 0.4);
 }

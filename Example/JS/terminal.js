@@ -2,35 +2,14 @@ let userInput, terminalOutput;
 let projAsk = false;
 let lastCommands = [];
 
-console.log("Welcome to my website!");
-
 const COMMANDS = {
-  rd: "Whoa!!! You found the secret command!!! To get access to the beta for my apps, go <a href = 'https://blackholegames.gq/beta' target = '_blank' style = 'color:#000;'> here </a> <br>The beta code is A3T4M",
-  n: "OK",
-  no: "OK",
-  about:
-    "This bit is coming soon. In the meantime, Feel free to visit my <a href ='https://github.com/Blackhole11232' target='_blank' style='color:#000;'> Github",
-  ls:
-    "usr&nbsp;&nbsp;&nbsp;&nbsp;home&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp;&nbsp;&nbsp;root",
-  cd: "changed directory to root..",
-  "cd ..": "cd: no such file or directory",
-  "cd var": "var aliased to ../",
-  "cd root": "access denied",
-  "cd usr": "no users found",
-
-  "cd home": "home was aliased to .",
-  sudo: "user not in the sudoers file.  This incident will be reported.",
-  help:
-    'Supported commands: <span class="code">about</span>, <span class="code">contact</span>, <span class="code">projects</span>, <span class="code">github</span><br>System commands: <span class="code">clear</span>, <span class="code">history</span>, <span class="code">cd</span>, <span class="code">ls</span><br>Tip: Use Up / Down arrow to go through recent commands',
-  contact:
-    "Email (coming soon): <a class='link' href=''>Gmail</a><br>Form: <a href='/contact' class='link'> Anon Message</a><br>",
+  command1: `You can use <pre style="color:red">HTML, CSS, and JavaScript</tags> for commands! Try clicking on <h1 onclick="alert('hihi')">me<img src="https://media.giphy.com/media/3o7bu0ZQQp2QQQQQQQ/giphy.gif" alt="" width=50px height=50px></h1>`,
 };
 
 const app = () => {
   userInput = document.getElementById("userInput");
   terminalOutput = document.getElementById("terminalOutput");
-  document.getElementById("dummyKeyboard").focus();
-  console.log("Application loaded");
+  document.getElementById("keyboard").focus();
 };
 
 const execute = function executeCommand(input) {
@@ -118,3 +97,42 @@ document.addEventListener("keydown", up);
 document.addEventListener("keydown", backspace);
 document.addEventListener("keypress", key);
 document.addEventListener("DOMContentLoaded", app);
+
+
+class Terminal extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/3f2db6afb6.js" crossorigin="anonymous"></script>
+    <div class="terminal_window" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
+    <div class="fakeMenu">
+      <div class="fakeButtons fakeClose"></div>
+      <div class="fakeButtons fakeMinimize"></div>
+      <div class="fakeButtons fakeZoom"></div>
+    </div>
+    <div class="fakeScreen">
+      <div class="terminal-window primary-bg" onclick="document.getElementById('dummyKeyboard').focus();">
+        <div class="terminal-output" id="terminalOutput">
+          <div class="terminal-line">
+            <span class="help-msg">Type <span class="help">command1</span> to get started</span>
+              commands.<br>
+          </div>
+        </div>
+        <div class="terminal-line">
+          <span class="success">➜</span>
+          <span class="directory">~</span>
+          <span class="user-input" id="userInput"></span>
+          <span class="line anim-typewriter"></span>
+          <input type="text" id="keyboard" class="dummy-keyboard" />
+        </div>
+      </div>
+    </div>
+  </div>
+  `
+  }
+}
+
+customElements.define("terminal-js", Terminal);
